@@ -1,0 +1,13 @@
+.error {
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #a94442;
+    background-color: #f2dede;
+}
+
+.info {
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #31708f;
+    background-color: #d9edf7;
+}

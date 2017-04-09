@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>Special login page</title>
+    <link href="/static/css/styles.css" th:href="@{../css/styles.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<h2>Welcome to special login page!</h2>
+<form th:action="@{/special/login}" method="post">
+    <div id="loginTable">
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    <label for="username">Username:</label>
+                </td>
+                <td>
+                    <input id="username" type="text" name="username"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                </td>
+                <td>
+                    <input id="password" type="password" name="password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Sign In"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="error" th:if="${param.error}">
+                        Invalid username and/or password.
+                    </div>
+                    <div class="info" th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+</body>
+</html>
